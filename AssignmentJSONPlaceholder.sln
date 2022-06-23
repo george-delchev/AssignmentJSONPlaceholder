@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenAPIs", "OpenAPIs", "{56
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONPlaceholder.APIAccess", "JSONPlaceholder.APIAccess\JSONPlaceholder.APIAccess.csproj", "{A0B1CD3D-FFC0-493A-9C96-83893D9E419D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{3EEC479B-AA9A-438B-9BA3-506142D1AE99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONPlaceholder.Svc", "JSONPlaceholder.Svc\JSONPlaceholder.Svc.csproj", "{C10D1509-6D88-4662-B50D-BD841B3D24C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{A0B1CD3D-FFC0-493A-9C96-83893D9E419D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0B1CD3D-FFC0-493A-9C96-83893D9E419D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0B1CD3D-FFC0-493A-9C96-83893D9E419D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C10D1509-6D88-4662-B50D-BD841B3D24C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C10D1509-6D88-4662-B50D-BD841B3D24C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C10D1509-6D88-4662-B50D-BD841B3D24C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C10D1509-6D88-4662-B50D-BD841B3D24C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{566525A9-DCE9-4A7A-B539-E18CC6540EE5} = {EE808418-B903-4397-ACD8-E4FF7A8BDACF}
 		{A0B1CD3D-FFC0-493A-9C96-83893D9E419D} = {566525A9-DCE9-4A7A-B539-E18CC6540EE5}
+		{C10D1509-6D88-4662-B50D-BD841B3D24C0} = {3EEC479B-AA9A-438B-9BA3-506142D1AE99}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4532DDD-B77F-415C-99FA-5C7E8682FE06}
