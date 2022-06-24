@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JSONPlaceholder.APIAccess
+namespace JSONPlaceholder.APIAccess.Interfaces
 {
     public class Class1
     {
