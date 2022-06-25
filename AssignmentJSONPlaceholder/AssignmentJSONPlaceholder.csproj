@@ -6,4 +6,13 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Unity" Version="5.11.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JSONPlaceholder.APIAccess.Interfaces\JSONPlaceholder.APIAccess.Interfaces.csproj" />
+    <ProjectReference Include="..\JSONPlaceholder.APIAccess\JSONPlaceholder.APIAccess.csproj" />
+  </ItemGroup>
+
 </Project>

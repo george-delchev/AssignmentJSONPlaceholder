@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AssignmentJSONPlaceholder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid ShowGridLines="True" Name="postsGridOnly">
 
+        <!--<DataGrid Name="postsGrid" Margin="10,10,10,10" AutoGenerateColumns="False" ItemsSource="{Binding integers}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding id}"/>
+            </DataGrid.Columns>
+        </DataGrid>-->
     </Grid>
 </Window>

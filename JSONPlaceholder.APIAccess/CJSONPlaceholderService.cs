@@ -1,5 +1,6 @@
 ﻿using JSONPlaceholder.APIAccess.Interfaces;
 using JSONPlaceholder.APIAccess.Interfaces.Models;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
@@ -15,9 +16,9 @@ namespace DnDApp.DataAccess.API.Services
             _clientFactory = clientFactory;
         }
 
-        public async Task<Posts> GetPosts()
+        public async Task<List<Post>> GetPosts()
         {
-            var res = await this.SendBaseRequest<Posts>("");
+            var res = await this.SendBaseRequest<List<Post>>("");
             return res;
         }
 
