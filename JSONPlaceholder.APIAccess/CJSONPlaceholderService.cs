@@ -1,19 +1,27 @@
-﻿using System.Net.Http;
+﻿using JSONPlaceholder.APIAccess.Interfaces;
+using JSONPlaceholder.APIAccess.Interfaces.Models;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
 namespace DnDApp.DataAccess.API.Services
 {
-    public class CJSONPlaceholderService// : IDnDAPIService
+    public class CJSONPlaceholderService : IJSONPlaceholderService
     {
         IHttpClientFactory _clientFactory;
-        const string _baseUrl = "https://www.dnd5eapi.co/api";
+        const string _baseUrl = "https://jsonplaceholder.typicode.com/posts";
         public CJSONPlaceholderService(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
         }
 
-        public async Task<T> SendBaseRequest<T>(string url) where T : new()
+        public async Task<Posts> GetPosts()
+        {
+            var res = await this.SendBaseRequest<Posts>("");
+            return res;
+        }
+
+        private async Task<T> SendBaseRequest<T>(string url) where T : new()
         {
             var result = new T();
             var baseurl = $"{_baseUrl}";
