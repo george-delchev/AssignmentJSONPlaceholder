@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace DnDApp.DataAccess.API.Services
 {
-    public class CJSONPlaceholderService : IJSONPlaceholderService
+    public class CPostsAPIDataAccessManager : IPostsDataAccessManager
     {
         IHttpClientFactory _clientFactory;
         const string _baseUrl = "https://jsonplaceholder.typicode.com/posts";
-        public CJSONPlaceholderService(IHttpClientFactory clientFactory)
+        public CPostsAPIDataAccessManager(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
         }
 
-        public async Task<List<Post>> GetPosts()
+        public async Task<List<PostDA>> GetPosts()
         {
-            var res = await this.SendBaseRequest<List<Post>>("");
+            var res = await this.SendBaseRequest<List<PostDA>>("");
             return res;
         }
 

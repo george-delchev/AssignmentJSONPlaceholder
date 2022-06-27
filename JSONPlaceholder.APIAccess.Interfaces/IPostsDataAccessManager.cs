@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace JSONPlaceholder.APIAccess.Interfaces
 {
-    public interface IJSONPlaceholderService
+    public interface IPostsDataAccessManager
     {
-        Task<List<Post>> GetPosts();
+        Task<List<PostDA>> GetPosts();
     }
 }

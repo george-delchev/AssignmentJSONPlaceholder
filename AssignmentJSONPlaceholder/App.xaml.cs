@@ -1,14 +1,5 @@
-﻿using DnDApp.DataAccess.API.Services;
-using JSONPlaceholder.APIAccess.Interfaces;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
-using Unity;
 
 namespace AssignmentJSONPlaceholder
 {
@@ -33,9 +24,9 @@ namespace AssignmentJSONPlaceholder
             
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient();
-            services.AddTransient<IJSONPlaceholderService, CJSONPlaceholderService>();
             services.AddSingleton<MainWindow>();
+            JSONPlaceholder.Svc.ServiceRegistration.RegisterServices(services);
         }
     }    
 }
+
