@@ -9,7 +9,7 @@ namespace WPFTestProject.DataAccess.Repository.Posts
     public class CPostsAPIDataAccessRepository : IPostsDataAccessRepository
     {
         IHttpClientFactory _clientFactory;
-        const string _baseUrl = "https://jsonplaceholder.typicode.com/posts";
+        const string _baseUrl = "https://jsonplaceholder.typicode.com/";
         public CPostsAPIDataAccessRepository(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
@@ -17,12 +17,14 @@ namespace WPFTestProject.DataAccess.Repository.Posts
 
         public async Task<List<PostDA>> GetPosts()
         {
-            var res = await this.SendBaseRequest<List<PostDA>>("");
+            var methodBase = System.Reflection.MethodBase.GetCurrentMethod();
+            var res = await this.SendBaseRequest<List<PostDA>>("posts", methodBase.Name);
             return res;
         }
 
-        private async Task<T> SendBaseRequest<T>(string url) where T : new()
+        private async Task<T> SendBaseRequest<T>(string url, string methodBaseName) where T : new()
         {
+            System.Diagnostics.Trace.WriteLine($"CPostsAPIDataAccessRepository\\SendBaseRequest: Sending request from: {methodBaseName}");
             var result = new T();
             var baseurl = $"{_baseUrl}";
             baseurl += url;
@@ -37,7 +39,9 @@ namespace WPFTestProject.DataAccess.Repository.Posts
             }
             else
             {
-                //result.ErrorString = response.ReasonPhrase;
+                var errorMsg = $"CPostsAPIDataAccessRepository\\SendBaseRequest: Failed request from: {methodBaseName}; StatusCode:{response.StatusCode}";
+                System.Diagnostics.Trace.Fail(errorMsg);
+                throw new System.Exception(errorMsg);
             }
             return result;
         }       

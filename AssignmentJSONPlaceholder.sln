@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONPlaceholder.Svc", "JSON
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E667EBE2-2256-44A9-9E59-3D31B4973D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONPlaceholder.API.Tests", "JSONPlaceholder.API.Tests\JSONPlaceholder.API.Tests.csproj", "{50522804-4216-4B2C-8476-63C26A0239A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONPlaceholder.API.Tests", "JSONPlaceholder.API.Tests\JSONPlaceholder.API.Tests.csproj", "{50522804-4216-4B2C-8476-63C26A0239A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTestProject.DataAccess", "WPFTestProject.DataAccess\WPFTestProject.DataAccess.csproj", "{94006C2B-E566-4521-8C7A-9A4F65B54D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFTestProject.DataAccess", "WPFTestProject.DataAccess\WPFTestProject.DataAccess.csproj", "{94006C2B-E566-4521-8C7A-9A4F65B54D72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppForSortingCvs", "TestAppForSortingCvs\TestAppForSortingCvs.csproj", "{41F2A421-7C01-4813-AEE8-CBBFC3AE2C8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{94006C2B-E566-4521-8C7A-9A4F65B54D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94006C2B-E566-4521-8C7A-9A4F65B54D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94006C2B-E566-4521-8C7A-9A4F65B54D72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41F2A421-7C01-4813-AEE8-CBBFC3AE2C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F2A421-7C01-4813-AEE8-CBBFC3AE2C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F2A421-7C01-4813-AEE8-CBBFC3AE2C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F2A421-7C01-4813-AEE8-CBBFC3AE2C8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
