@@ -2,6 +2,7 @@
 using JSONPlaceholder.Svc.Models.Posts;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -14,7 +15,7 @@ namespace AssignmentJSONPlaceholder
     public partial class MainWindow : Window
     {
         List<Post> posts = new List<Post>();
-        bool showId;
+        bool working = false;
         IPostsManager postsManager;
         public MainWindow()
         {
@@ -25,8 +26,6 @@ namespace AssignmentJSONPlaceholder
                 postsGridOnly.RowDefinitions.Add(new RowDefinition());
                 postsGridOnly.ColumnDefinitions.Add(new ColumnDefinition());
             }
-
-            showId = true;
         }
         public MainWindow(IPostsManager postsManager) : this()
         {
@@ -37,41 +36,48 @@ namespace AssignmentJSONPlaceholder
             posts = await postsManager.GetPosts();
             foreach (var item in posts)
             {
-                MakeTextBox(item.Id);
+                MakeTextBox(item);
             }
         }
-        private void MakeTextBox(int id)
+        private void MakeTextBox(Post post)
         {
+            var id = post.Id;
             var col = (id - 1) % 10;
             var row = (id - 1) / 10;
 
-            var text = new TextBox();
-            text.Text = id.ToString();
-            text.IsReadOnly = true;
+            var text = new Button();
+            text.Content = id.ToString();
+            text.DataContext = post.UserId.ToString();
+            //text.IsReadOnly = true;
             //find a different event, maybe change the element type???
-            text.MouseDoubleClick += ChangeTexts;
+            text.Click += ChangeTexts_Click;
+            ;
 
             postsGridOnly.Children.Add(text);
             Grid.SetColumn(text, col);
             Grid.SetRow(text, row);
         }
-        private void ChangeTexts(object sender, RoutedEventArgs e)
+        private void ChangeTexts_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var item in postsGridOnly.Children)
+            if (working) return;
+            working = true;
+            Thread T1 = new Thread(new ThreadStart(ChangeTestsInternal));
+            T1.Start();
+        }
+        private void ChangeTestsInternal()
+        {
+            this.Dispatcher.Invoke(() =>
             {
-                var id = ((TextBox)item).Text;
-                var newId = 0;
-                if (showId)
+                foreach (var item in postsGridOnly.Children)
                 {
-                    newId = posts.Where(x => x.Id == int.Parse(id)).FirstOrDefault().UserId;
+                    var textBox = (Button)item;
+                    var id = textBox.Content;
+                    var userId = (string)textBox.DataContext;
+                    textBox.Content = userId;
+                    textBox.DataContext = id;
                 }
-                else
-                {
-                    newId = posts.Where(x => x.UserId == int.Parse(id)).FirstOrDefault().Id;
-                }
-                ((TextBox)item).Text = newId.ToString();
-            }
-            showId = !showId;
+            });
+            working = false;
         }
     }
 }
