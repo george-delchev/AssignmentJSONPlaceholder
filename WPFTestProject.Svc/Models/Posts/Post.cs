@@ -1,4 +1,4 @@
-﻿namespace JSONPlaceholder.Svc.Models.Posts
+﻿namespace WPFTestProject.Svc.Models.Posts
 {
     public class Post
     {

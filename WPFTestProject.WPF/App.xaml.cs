@@ -25,7 +25,7 @@ namespace AssignmentJSONPlaceholder
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<MainWindow>();
-            JSONPlaceholder.Svc.ServiceRegistration.RegisterServices(services);
+            WPFTestProject.Svc.ServiceRegistration.RegisterServices(services);
         }
     }    
 }

@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using JSONPlaceholder.Svc.Models.Posts;
+using WPFTestProject.Svc.Models.Posts;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WPFTestProject.DataAccess.Models.Posts;
 using WPFTestProject.DataAccess.Repository.Posts;
 
-namespace JSONPlaceholder.Svc.Managers.Posts
+namespace WPFTestProject.Svc.Managers.Posts
 {
     public class CPostsManager : IPostsManager
     {

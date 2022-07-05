@@ -1,10 +1,9 @@
-﻿using JSONPlaceholder.Svc.Managers.Posts;
-using JSONPlaceholder.Svc.Models.Posts;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using WPFTestProject.Svc.Managers.Posts;
+using WPFTestProject.Svc.Models.Posts;
 
 namespace AssignmentJSONPlaceholder
 {

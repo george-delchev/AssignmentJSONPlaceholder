@@ -1,15 +1,13 @@
 using AutoMapper;
-using JSONPlaceholder.Svc.Managers.Posts;
-using JSONPlaceholder.Svc.Models.Posts;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using WPFTestProject.DataAccess.Models.Posts;
 using WPFTestProject.DataAccess.Repository.Posts;
+using WPFTestProject.Svc.Managers.Posts;
+using WPFTestProject.Svc.Models.Posts;
 using Xunit;
 
-namespace JSONPlaceholder.API.Tests
+namespace WPFTestProject.Tests
 {
     public class PostsManagerTests
     {

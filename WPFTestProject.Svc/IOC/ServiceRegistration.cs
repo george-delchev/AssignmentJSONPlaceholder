@@ -1,8 +1,8 @@
-﻿using JSONPlaceholder.Svc.Managers.Posts;
+﻿using WPFTestProject.Svc.Managers.Posts;
 using Microsoft.Extensions.DependencyInjection;
 using WPFTestProject.DataAccess.Repository.Posts;
 
-namespace JSONPlaceholder.Svc
+namespace WPFTestProject.Svc
 {
     public class ServiceRegistration
     {
@@ -15,7 +15,7 @@ namespace JSONPlaceholder.Svc
             services.AddTransient<IPostsManager, CPostsManager>();
 
             //mappings
-            services.AddAutoMapper(cfg => cfg.AddMaps("JSONPlaceholder.Svc"));
+            services.AddAutoMapper(cfg => cfg.AddMaps("WPFTestProject.Svc"));
             //managers+            
         }
     }

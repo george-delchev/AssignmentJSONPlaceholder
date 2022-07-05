@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using JSONPlaceholder.Svc.Models.Posts;
+using WPFTestProject.Svc.Models.Posts;
 using WPFTestProject.DataAccess.Models.Posts;
 
-namespace JSONPlaceholder.Svc.Mappings.Posts
+namespace WPFTestProject.Svc.Mappings.Posts
 {
     public class PostsMappings : Profile
     {
