@@ -22,6 +22,7 @@ Another interesting Open API. Also some WPF experience, even as basic as it is, 
 
 --better element for displaying,
 --something else if I find out
+--not happy with name of solution, renamed the rest but eh, gonna leave it like that w/e
 
 ## Questions:
 
@@ -43,4 +44,7 @@ Another interesting Open API. Also some WPF experience, even as basic as it is, 
 4.a.A: The primary use of this interface is to release unmanaged resources. The garbage collector automatically releases the memory allocated to a managed object when that object is no longer used. You should implement IDisposable if your type uses unmanaged resources directly or if you wish to use disposable resources yourself.  https://docs.microsoft.com/en-us/dotnet/api/system.idisposable?view=net-6.0
 4.b.A: The using statement in C# ... simplify the code that you must write to cleanup an object. The using statement obtains one or more resources, executes the statements that you specify, and automatically disposes of the object. https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/using-objects
 
-  
+5.Q: 5. When a user logs in on our API, a JWT token is issued and our Outlook plugin uses this token for every request for authentication. Here's an example of such a token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkplcmVteSIsImFkbWluIjpmYWxzZX0.BgcLOiwBvyuisQk9yWW0q0ZScMyIHNmDctw12-meCHU 
+Why and when is it (or isn't it) safe to use this
+
+5.A: No idea, a bit of googling gave this answer, might do more research later as well: https://blog.logrocket.com/jwt-authentication-best-practices/
