@@ -22,6 +22,7 @@ Another interesting Open API. Also some WPF experience, even as basic as it is, 
 
 --better element for displaying,
 --something else if I find out
+--not happy with name of solution, renamed the rest but eh, gonna leave it like that w/e
 
 ## Questions:
 
